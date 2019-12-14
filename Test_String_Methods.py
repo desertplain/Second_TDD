@@ -12,11 +12,11 @@ class Test_String(unittest.TestCase):
         self.assertEqual(view, view.casefold())
 
     def test_scen(self):
-        view = misiek.scen('wyskok')
+        view = misiek.scen('wyskok', 2)
         self.assertEqual(view, view.center())
 
     def test_scou(self):
-        view = misiek.scou('napoje')
+        view = misiek.scou('Ala ma kota a kot ma ala', 'ma')
         self.assertEqual(view, view.count())
 
     def test_senc(self):
