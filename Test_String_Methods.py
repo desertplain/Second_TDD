@@ -4,24 +4,31 @@ import misiek
 class Test_String(unittest.TestCase):
 
     def test_scap(self):
-        view = misiek.scap('rzeczy')
-        self.assertEqual(view, view.capitalize())
+        zd='rzeczy'
+        view = misiek.scap(zd)
+        self.assertEqual(view, zd.capitalize())
 
     def test_scas(self):
-        view = misiek.scas('strachy na lachy')
-        self.assertEqual(view, view.casefold())
+        zd='strachy na lachy'
+        view = misiek.scas(zd)
+        self.assertEqual(view, zd.casefold())
 
     def test_scen(self):
-        view = misiek.scen('wyskok', 20)
-        self.assertNotEqual(view, view.center(2))
+        zd='wyskok'
+        ilo=20
+        view = misiek.scen(zd,ilo)
+        self.assertEqual(view,zd.center(ilo))
 
     def test_scou(self):
-        view = misiek.scou('Ala ma kota a kot ma ala', 'ma')
-        self.assertEqual(view, view.count('ma'))
+        zd1='Ala ma kota a kot ma ala'
+        zd2='ma'
+        view = misiek.scou(zd1,zd2)
+        self.assertEqual(view, zd1.count(zd2))
 
     def test_senc(self):
-        view = misiek.senc('kanalizacja')
-        self.assertEqual(view, view.encode())
+        zd='kanalizacja'
+        view = misiek.senc(zd)
+        self.assertEqual(view, zd.encode())
 
     def test_ssta(self):
         view = misiek.ssta('Wellcom in Brave New World!', 'Wellcom')
