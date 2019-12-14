@@ -1,2 +1,10 @@
 def scap(slowo):
     return slowo.capitalize()
+def scas(slowo):
+    return slowo.casefold()
+def scen(slowo,a):
+    return slowo.center(int(a))
+def scou(slowo,drugie):
+    return slowo.count(drugie)
+def senc(slowo):
+    return slowo.encode()
